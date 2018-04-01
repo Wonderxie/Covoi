@@ -26,11 +26,29 @@ class UserController extends Controller{
 		$view = new View($this,'index');
 		$view->render();
 	}
+  public function monProfil($request){
+    $view = new View($this,'monProfil');
+		$view->render();
+  }
+  public function proposerTrajet($request){
+    $view = new View($this,'proposerTrajet');
+    $view->render();
+  }
+  public function tryPropose($request){
+    
+
+  }
 
 	public function deconnexion ($request){
 		session_unset();
 		session_destroy();
 		echo "Vous êtes déconnectés";
+    $newRequest = new Request();
+    //Changement de contrôller
+    $newRequest->write('controller','Anonymous');
+    $newRequest->write('action','defaultAction');
+    $controller=Dispatcher::dispatch($newRequest);
+    $controller->execute();
 	}
 
 }
