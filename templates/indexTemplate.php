@@ -7,7 +7,7 @@
             $request = Request::getCurrentRequest();
           	$controllerName=$request->getControllerName();
             if ($controllerName=="user"){
-              echo "<h2 class='heading mb-2 display-4 font-light probootstrap-animate'>Bienvenue</h2>";
+              echo "<h2 class='heading mb-2 display-4 font-light probootstrap-animate'>Bienvenue ".$_SESSION['PRENOM']."! </h2>";
             }
             else{
               echo "<h2 class='heading mb-2 display-4 font-light probootstrap-animate'>On a pas de soleil mais on a des voitures</h2>";

@@ -1,6 +1,7 @@
 <?php
 
 class User extends Model{
+	protected $user;
 
 	public static function create($email,$password, $nom, $prenom,$userType) {
 		$sql= "INSERT INTO UTILISATEUR (EMAIL, MDP, NOM, PRENOM,TYPE)
@@ -34,13 +35,13 @@ class User extends Model{
 		}
 	}
 
-	/*	public function mail(){
-	return $this->EMAIL;
-}*/
+	/*public function mail(){
+		return $this->user['EMAIL'];
+	}*/
 
 
-	public function getWithMail ($userMail){
-		$sql="SELECT (CODE_UTILISATEUR), (NOM), (PRENOM), (EMAIl), (MDP), (ADMIN), (TYPE), (UNITE), (PROMOTION) FROM UTILISATEUR WHERE EMAIL='".$userMail;
+	public static function getWithMail ($userMail){
+		$sql="SELECT (CODE_UTILISATEUR), (NOM), (PRENOM), (EMAIL), (MDP), (ADMIN), (TYPE), (UNITE), (PROMOTION) FROM UTILISATEUR WHERE EMAIL='".$userMail."'";
 		$request=self::exec($sql);
 		$User=$request->fetch(PDO::FETCH_ASSOC);
 		return $User;

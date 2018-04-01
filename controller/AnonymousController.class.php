@@ -92,10 +92,11 @@ class AnonymousController extends Controller{
 			}
 			else {
 				$newRequest = new Request();
+				$user= User::getWithMail($email);
 				//Changement de contrôller
 				$newRequest->write('controller','user');
 				$newRequest->write('action','defaultAction');
-				//$newRequest->write('user',$user->id());
+				$newRequest->write('user',$user['EMAIL']);
 				$controller=Dispatcher::dispatch($newRequest);
 				$controller->execute();
 			}
