@@ -1,0 +1,10 @@
+.background-page {
+  background-image: url(imgs/accueil.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-user{
+  color:	#000000;
+}
