@@ -9,7 +9,7 @@
           </p>
         </div>
         <div class="col-md probootstrap-animate">
-          <form action="index.php?action=tryPropose" class="probootstrap-form">
+          <form action="index.php?action=tryPropose" class="probootstrap-form" method="post" >
             <div class="form-group">
               <div class="row mb-3">
                 <div class="col-md">
@@ -17,11 +17,8 @@
                     <label for="id_label_single">Départ</label>
 
                     <label for="id_label_single" style="width: 100%;">
-                      <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
-                        <?php
+                      <select class="js-example-basic-single js-states form-control" id="departCity" style="width: 100%;">
 
-
-                        ?>
                         <option value="Lavoisier">Résidence Lavoisier</option>
                         <option value="Bourseul">Site Bourseul</option>
                         <option value="Lahure">Site Lahure</option>
@@ -36,7 +33,7 @@
                     <label for="id_label_single2">Arrivée</label>
                     <div class="probootstrap_select-wrap">
                       <label for="id_label_single2" style="width: 100%;">
-                      <select class="js-example-basic-single js-states form-control" id="id_label_single2" style="width: 100%;">
+                      <select class="js-example-basic-single js-states form-control" id="arrivalCity" style="width: 100%;">
                        <option value="Lahure">Site Lahure</option>
                        <option value="Lavoisier">Résidence Lavoisier</option>
                        <option value="Bourseul">Site Bourseul</option>
@@ -69,6 +66,92 @@
                   </div>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label for="Immatriculation" class="sr-only sr-only-focusable">Immatriculation</label>
+                <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="Immatriculation *">
+              </div>
+
+              <div class="form-group">
+                <label for="nbPlaces" class="sr-only sr-only-focusable">Nombre de places</label>
+                <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="Immatriculation *">
+              </div>
+
+              <form class="form-horizontal">
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md">Nombre de places disponibles</label>
+  <div class="row mb-6 ">
+    <div class="radio col-md-3">
+      <label for="type0">
+        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+        1
+      </label>
+    </div>
+
+    <div class="radio col-md-3">
+      <label for="radios-1">
+        <input type="radio" name="radios" id="radios-1" value="2">
+        2
+      </label>
+    </div>
+
+    <div class="radio col-md-3">
+      <label for="radios-1">
+        <input type="radio" name="radios" id="radios-1" value="3">
+        3
+      </label>
+    </div>
+
+    <div class="radio col-md-3">
+      <label for="radios-1">
+        <input type="radio" name="radios" id="radios-1" value="4">
+        4
+      </label>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+
+  <div class="row">
+    <label class="control-label" for="radios">Nombre de places disponibles</label>
+
+    <div class="col-md">
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      1
+    </label>
+  </div>
+
+    <div class="col-md">
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      2
+    </label>
+  </div>
+
+
+    <div class="col-md">
+    <label class="radio-inline" for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="3">
+      3
+    </label>
+  </div>
+
+    <div class="col-md">
+    <label class="radio-inline" for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="4">
+      4
+    </label>
+      </div>
+</div>
+</div>
+
+</form>
+
               <!-- END row -->
               <div class="row">
                 <div class="col-md">
