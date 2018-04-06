@@ -27,6 +27,5 @@
 
     <script src="assets/bootstrap/js/main.js"></script>
 
-
 	</body>
 </html>

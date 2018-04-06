@@ -8,160 +8,72 @@
           <p class="lead mb-5 probootstrap-animate">
           </p>
         </div>
-        <div class="col-md probootstrap-animate">
-          <form action="index.php?action=tryPropose" class="probootstrap-form" method="post" >
+
+        <div class="col-md-6 probootstrap-animate">
+
+          <form action="index.php?action=tryPropose" method="post" class="probootstrap-form probootstrap-form-box mb60">
+            <div class="row mb-3">
+              <div class="form-group col-md">
+                <label for="deparCity">Départ</label>
+                <label for="deparCity" class="sr-only sr-only-focusable">Départ</label>
+                <input type="text" class="form-control" id="deparCity" name="deparCity" placeholder="Départ">
+              </div>
+              <div class="form-group col-md">
+                <label for="arrivalCity">Arrivée</label>
+                <label for="arrivalCity" class="sr-only sr-only-focusable">Arrivée</label>
+                <input type="text" class="form-control" id="arrivalCity" name="arrivalCity" placeholder="Arrivée">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="form-group col-md">
+                <label for="deparDate">Date de Départ</label>
+                <label for="departDate" class="sr-only sr-only-focusable">Date de départ</label>
+                <input type="date" class="form-control" id="departDate" name="departDate" placeholder="Date de départ">
+              </div>
+              <div class="form-group col-md">
+                <label for="deparTime">Heure  de Départ</label>
+                <label for="departTime" class="sr-only sr-only-focusable">Heure de départ</label>
+                <input type="time" class="form-control" id="" name="departTime" placeholder="Heure de départ">
+              </div>
+            </div>
+
+            <div>
+              <a href="" class="btn btn-xs btn-default btn-block" id= "addTroncon" onclick="addTroncon()">+ Ajouter un tronçon</a>
+            </div>
+
             <div class="form-group">
-              <div class="row mb-3">
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="id_label_single">Départ</label>
+              <label for="Immatriculation">Immatriculation</label>
+              <label for="Immatriculation" class="sr-only sr-only-focusable">Immatriculation</label>
+              <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="Immatriculation *">
+            </div>
 
-                    <label for="id_label_single" style="width: 100%;">
-                      <select class="js-example-basic-single js-states form-control" id="departCity" style="width: 100%;">
-
-                        <option value="Lavoisier">Résidence Lavoisier</option>
-                        <option value="Bourseul">Site Bourseul</option>
-                        <option value="Lahure">Site Lahure</option>
-                        <option value="Condorcet">Résidence Condorcet</option>
-                        <option value="Descartes">Résidence Descartes</option>
-                      </select>
-                    </label>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="id_label_single2">Arrivée</label>
-                    <div class="probootstrap_select-wrap">
-                      <label for="id_label_single2" style="width: 100%;">
-                      <select class="js-example-basic-single js-states form-control" id="arrivalCity" style="width: 100%;">
-                       <option value="Lahure">Site Lahure</option>
-                       <option value="Lavoisier">Résidence Lavoisier</option>
-                       <option value="Bourseul">Site Bourseul</option>
-                       <option value="Condorcet">Résidence Condorcet</option>
-                       <option value="Descartes">Résidence Descartes</option>
-                      </select>
-                    </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- END row -->
-              <div class="row mb-5">
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="probootstrap-date-departure">Aller le</label>
-                    <div class="probootstrap-date-wrap">
-                      <span class="icon ion-calendar"></span>
-                      <input type="text" id="probootstrap-date-departure" class="form-control" placeholder="">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md">
-                  <div class="form-group">
-                    <label for="probootstrap-date-arrival">Retour le</label>
-                    <div class="probootstrap-date-wrap">
-                      <span class="icon ion-calendar"></span>
-                      <input type="text" id="probootstrap-date-arrival" class="form-control" placeholder="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="Immatriculation" class="sr-only sr-only-focusable">Immatriculation</label>
-                <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="Immatriculation *">
-              </div>
-
-              <div class="form-group">
-                <label for="nbPlaces" class="sr-only sr-only-focusable">Nombre de places</label>
-                <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="Immatriculation *">
-              </div>
-
-              <form class="form-horizontal">
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md">Nombre de places disponibles</label>
-  <div class="row mb-6 ">
-    <div class="radio col-md-3">
-      <label for="type0">
-        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-        1
-      </label>
-    </div>
-
-    <div class="radio col-md-3">
-      <label for="radios-1">
-        <input type="radio" name="radios" id="radios-1" value="2">
-        2
-      </label>
-    </div>
-
-    <div class="radio col-md-3">
-      <label for="radios-1">
-        <input type="radio" name="radios" id="radios-1" value="3">
-        3
-      </label>
-    </div>
-
-    <div class="radio col-md-3">
-      <label for="radios-1">
-        <input type="radio" name="radios" id="radios-1" value="4">
-        4
-      </label>
-    </div>
-  </div>
-</div>
+            <div class="form-group">
+              <label for="nbPlaces">Nombre de places disponibles</label>
+              <label for="nbPlaces" style="width: 100%;">
+                <select class=" js-states form-control" id="nbPlaces" style="width: 100%;">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="trajetType">Type de trajet</label>
+              <label for="trajetType" class="sr-only sr-only-focusable">Type de trajet</label>
+              <input type="text" class="form-control" id="trajetType" name="trajetType" placeholder="Type de trajet">
+            </div>
+            <div class="form-group col-md">
+              <input type="submit" class="btn btn-warning btn-block" id="submit" name="submit" value="Proposer">
+            </div>
 
 
-<div class="form-group">
 
-  <div class="row">
-    <label class="control-label" for="radios">Nombre de places disponibles</label>
-
-    <div class="col-md">
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      1
-    </label>
-  </div>
-
-    <div class="col-md">
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      2
-    </label>
-  </div>
-
-
-    <div class="col-md">
-    <label class="radio-inline" for="radios-2">
-      <input type="radio" name="radios" id="radios-2" value="3">
-      3
-    </label>
-  </div>
-
-    <div class="col-md">
-    <label class="radio-inline" for="radios-3">
-      <input type="radio" name="radios" id="radios-3" value="4">
-      4
-    </label>
-      </div>
-</div>
-</div>
-
-</form>
-
-              <!-- END row -->
-              <div class="row">
-                <div class="col-md">
-          <a class="btn btn-warning btn-xl text-uppercase js-scroll-trigger btn-block" href="index.php?action=recherche">Rechercher</a>
-                </div>
-              </div>
             </div>
           </form>
         </div>
-      </div>
+
     </div>
 
   </section>

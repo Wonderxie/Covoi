@@ -30,12 +30,17 @@ class UserController extends Controller{
     $view = new View($this,'monProfil');
 		$view->render();
   }
+  public function parametres($request){
+    $view = new View($this,'parametres');
+    $view->render();
+  }
+
   public function proposerTrajet($request){
     $view = new View($this,'proposerTrajet');
     $view->render();
   }
   public function tryPropose($request){
-    
+
 
   }
 
