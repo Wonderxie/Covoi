@@ -49,7 +49,7 @@ a {
   padding: 7em 0; }
   .probootstrap-cover .overlay {
     position: absolute;
-  
+
     top: 0;
     left: 0;
     right: 0;
@@ -93,12 +93,15 @@ a {
 
 .navbar-brand {
   text-transform: uppercase;
-  letter-spacing: .3em; }
+  font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+  letter-spacing: .3em;
+  color:#fed136;}
 
 .navbar-toggler span i {
   font-size: 30px; }
 
 .probootstrap_navbar {
+  background: #2E2E2E;
   position: absolute;
   top: 0;
   left: 0;

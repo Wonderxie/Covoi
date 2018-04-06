@@ -26,6 +26,7 @@
 
                     <label for="id_label_single" style="width: 100%;">
                       <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
+
                         <option value="Lavoisier">Résidence Lavoisier</option>
                         <option value="Bourseul">Site Bourseul</option>
                         <option value="Lahure">Site Lahure</option>

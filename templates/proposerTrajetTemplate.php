@@ -39,7 +39,9 @@
             </div>
 
             <div>
-              <a href="" class="btn btn-xs btn-default btn-block" id= "addTroncon" onclick="addTroncon()">+ Ajouter un tronçon</a>
+              <span id="addTroncon1">
+                  <a href="javascript:create_champ(1)" class="btn btn-xs btn-default btn-block" id= "addTroncon" onclick="addTroncon()">+ Ajouter un tronçon</a>
+              </span>
             </div>
 
             <div class="form-group">
@@ -77,3 +79,13 @@
     </div>
 
   </section>
+
+
+<script type="text/javascript">
+  function create_champ(i) {
+  var i2 = i + 1;
+  document.getElementById('addTroncon'+i).innerHTML = '<hr color="#FFD500"><div class="row mb-3"><div class="form-group col-md"><label for="troncon['+i+']">Ville intermédiaire</label><label for="troncon['+i+']" class="sr-only sr-only-focusable">Départ</label><input type="text" class="form-control" id="troncon['+i+']" name="troncon['+i+']" placeholder="Ville intermédiaire"></div><div class="form-group col-md"><label for="heure['+i+']">Heure  de Départ</label><label for="heure['+i+']" class="sr-only sr-only-focusable">Heure de départ</label><input type="time" class="form-control" id="" name="heure['+i+']" placeholder="Heure de départ"></div></div></span>';
+
+  document.getElementById('addTroncon'+i).innerHTML += (i <= 4) ? '<br /><span id="addTroncon'+i2+'"><a href="javascript:create_champ('+i2+')" class="btn btn-xs btn-default btn-block" id= "addTroncon" onclick="addTroncon()">+ Ajouter un tronçon</a></span>' : '';
+  }
+</script>

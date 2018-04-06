@@ -10,10 +10,6 @@ class Dispatcher extends MyObject{
 			//Changement de contrôller
 			$newRequest->write('controller','user');
 			//$newRequest->write('user',$user->id());
-
-		/*	$userControler = new UserController($request);
-			UserController::$user->tryLogin($_SESSION['EMAIL'], $_SESSION['PASSWORD']);
-			return $userControler;*/
 		}
 
 		$controllerClassName = ucfirst($request->getControllerName()) . 'Controller';

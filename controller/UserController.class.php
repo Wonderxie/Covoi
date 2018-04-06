@@ -7,8 +7,6 @@ class UserController extends Controller{
 		//Construit le controller à partir de la requête
 
 		parent::__construct($request);
-
-		session_start();
 		$userMail = NULL;
 
 		if(($request->has('user')))
